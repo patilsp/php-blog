@@ -4,10 +4,6 @@ A **Question & Answer** platform where **students, teachers, and parents** can a
 
 ---
 
-
-
----
-
 ## 🚀 Features  
 ✅ User Registration & Login (PHP Sessions)  
 ✅ Post, Edit & Delete Questions  
@@ -45,6 +41,7 @@ A **Question & Answer** platform where **students, teachers, and parents** can a
 │── upvote.php # Handles upvotes/downvotes
 │── README.md # Project Documentation
 
+---
 
 ## 📌 Installation Guide  
 ### **1️⃣ Clone the Repository**  
