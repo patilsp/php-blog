@@ -9,6 +9,9 @@ A **Question & Answer** platform where **students, teachers, and parents** can a
 ![image](https://github.com/user-attachments/assets/fbd758c9-8db6-4fb1-a5c0-f08cf9749221)
 
 ---
+![image](https://github.com/user-attachments/assets/3b27972b-db62-41f0-a76f-c189aa15064c)
+
+---
 
 ## 🚀 Features  
 ✅ User Registration & Login (PHP Sessions)  
