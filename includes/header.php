@@ -232,7 +232,7 @@
                                     </div>
 
                                     <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
-                                        <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image: url('assets/media/misc/menu-header-bg.jpg');">
+                                        <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image: url('assets/media/images/menu-header-bg.jpg');">
                                             <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications <span class="fs-8 opacity-75 ps-3">24 reports</span></h3>
 
                                             <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
@@ -403,7 +403,7 @@
                                                     </div>
 
                                                     <div class="text-center px-4">
-                                                        <img class="mw-100 mh-200px" alt="image" src="assets/media/illustrations/sketchy-1/1.png" />
+                                                        <img class="mw-100 mh-200px" alt="image" src="assets/media/images/notification.png" />
                                                     </div>
                                                 </div>
                                             </div>
