@@ -1,4 +1,5 @@
 <?php
+
 include 'includes/config.php';
 // Fetch total number of questions
 $total_questions_result = $conn->query("SELECT COUNT(*) AS total FROM questions");

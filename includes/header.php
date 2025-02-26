@@ -1,7 +1,9 @@
-
 <?php
-    session_start();    
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" id="mainHtml">
 <head>
@@ -29,10 +31,10 @@
                     <div class="container-xxl d-flex align-items-stretch justify-content-between">
                         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 w-lg-225px me-5">
                             <div class="btn btn-icon btn-active-icon-primary ms-n2 me-2 d-flex d-lg-none" id="kt_aside_toggle">
-                                <i class="fa fa-bars fs-1"><span class="path1"></span><span class="path2"></span></i>
+                                <i class="fa fa-bars fs-1"></i>
                             </div>
 
-                            <a href="/index.php">
+                            <a href="dashboard.php">
                                 <img alt="Logo" src="assets/media/logos/favicon.png" class="d-none d-lg-inline h-30px theme-light-show" />
                                 <img alt="Logo" src="assets/media/logos/favicon.png" class="d-none d-lg-inline h-30px theme-dark-show" />
                                 <img alt="Logo" src="assets/media/logos/favicon.png" class="d-lg-none h-25px" />
@@ -59,14 +61,14 @@
                                     >
                                         <div class="d-flex align-items-center" data-kt-search-element="toggle" id="kt_header_search_toggle">
                                             <div class="btn btn-icon btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px">
-                                                <i class="fa fa-search fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                                <i class="fa fa-search fs-3"></i>
                                             </div>
                                         </div>
 
                                         <div data-kt-search-element="content" class="menu menu-sub menu-sub-dropdown p-7 w-325px w-md-375px">
                                             <div data-kt-search-element="wrapper">
                                                 <form data-kt-search-element="form" class="w-100 position-relative mb-3" autocomplete="off">
-                                                    <i class="fa fa-search fs-2 text-gray-500 position-absolute top-50 translate-middle-y ms-0"><span class="path1"></span><span class="path2"></span></i>
+                                                    <i class="fa fa-search fs-2 text-gray-500 position-absolute top-50 translate-middle-y ms-0"></i>
 
                                                     <input type="text" class="search-input form-control form-control-flush ps-10" name="search" value="" placeholder="Search..." data-kt-search-element="input" />
 
@@ -75,7 +77,7 @@
                                                     </span>
 
                                                     <span class="search-reset btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 d-none" data-kt-search-element="clear">
-                                                        <i class="fa fa-cross fs-2 fs-lg-1 me-0"><span class="path1"></span><span class="path2"></span></i>
+                                                        <i class="fa fa-cross fs-2 fs-lg-1 me-0"></i>
                                                     </span>
 
 
@@ -146,7 +148,7 @@
                                                         <div class="d-flex align-items-center mb-5">
                                                             <div class="symbol symbol-40px me-4">
                                                                 <span class="symbol-label bg-light">
-                                                                    <i class="fa fa-laptop fs-2 text-primary"><span class="path1"></span><span class="path2"></span></i>
+                                                                    <i class="fa fa-laptop fs-2 text-primary"></i>
                                                                 </span>
                                                             </div>
 
@@ -159,7 +161,7 @@
                                                         <div class="d-flex align-items-center mb-5">
                                                             <div class="symbol symbol-40px me-4">
                                                                 <span class="symbol-label bg-light">
-                                                                    <i class="fa fa-comment fs-2 text-primary"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                                                    <i class="fa fa-comment fs-2 text-primary"><span class="path3"></span><span class="path4"></span></i>
                                                                 </span>
                                                             </div>
 
@@ -172,7 +174,7 @@
                                                         <div class="d-flex align-items-center mb-5">
                                                             <div class="symbol symbol-40px me-4">
                                                                 <span class="symbol-label bg-light">
-                                                                    <i class="fa fa-comment fs-2 text-primary"><span class="path1"></span><span class="path2"></span></i>
+                                                                    <i class="fa fa-comment fs-2 text-primary"></i>
                                                                 </span>
                                                             </div>
 
@@ -187,7 +189,7 @@
                                                         <div class="d-flex align-items-center mb-5">
                                                             <div class="symbol symbol-40px me-4">
                                                                 <span class="symbol-label bg-light">
-                                                                    <i class="fa fa-comment fs-2 text-primary"><span class="path1"></span><span class="path2"></span></i>
+                                                                    <i class="fa fa-comment fs-2 text-primary"></i>
                                                                 </span>
                                                             </div>
 
@@ -201,7 +203,7 @@
 
                                                 <div data-kt-search-element="empty" class="text-center d-none">
                                                     <div class="pt-10 pb-10">
-                                                        <i class="fa fa-search-list fs-4x opacity-50"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                                                        <i class="fa fa-search-list fs-4x opacity-50"><span class="path3"></span></i>
                                                     </div>
 
                                                     <div class="pb-15 fw-semibold">
@@ -224,7 +226,7 @@
                                         data-kt-menu-attach="parent"
                                         data-kt-menu-placement="bottom-end"
                                     >
-                                        <i class="fa fa-bell fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                        <i class="fa fa-bell fs-3"></i>
                                         <span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"> </span>
 
                                     </div>
@@ -255,7 +257,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <div class="symbol symbol-35px me-4">
                                                                 <span class="symbol-label bg-light-primary">
-                                                                    <i class="fa fa-bars fs-2 text-primary"><span class="path1"></span><span class="path2"></span></i>
+                                                                    <i class="fa fa-bars fs-2 text-primary"></i>
                                                                 </span>
                                                             </div>
 
@@ -272,7 +274,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <div class="symbol symbol-35px me-4">
                                                                 <span class="symbol-label bg-light-danger">
-                                                                    <i class="fa fa-information fs-2 text-danger"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                                                                    <i class="fa fa-information fs-2 text-danger"><span class="path3"></span></i>
                                                                 </span>
                                                             </div>
 
@@ -289,7 +291,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <div class="symbol symbol-35px me-4">
                                                                 <span class="symbol-label bg-light-warning">
-                                                                    <i class="fa fa-briefcase fs-2 text-warning"><span class="path1"></span><span class="path2"></span></i>
+                                                                    <i class="fa fa-briefcase fs-2 text-warning"></i>
                                                                 </span>
                                                             </div>
 
@@ -306,7 +308,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <div class="symbol symbol-35px me-4">
                                                                 <span class="symbol-label bg-light-success">
-                                                                    <i class="fa fa-abstract-12 fs-2 text-success"><span class="path1"></span><span class="path2"></span></i>
+                                                                    <i class="fa fa-abstract-12 fs-2 text-success"></i>
                                                                 </span>
                                                             </div>
 
@@ -323,7 +325,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <div class="symbol symbol-35px me-4">
                                                                 <span class="symbol-label bg-light-primary">
-                                                                    <i class="fa fa-colors-square fs-2 text-primary"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                                                    <i class="fa fa-colors-square fs-2 text-primary"><span class="path3"></span><span class="path4"></span></i>
                                                                 </span>
                                                             </div>
 
@@ -358,7 +360,7 @@
                                                             <div class="symbol symbol-35px me-4">
                                                                 <span class="symbol-label bg-light-warning">
                                                                     <i class="fa fa-color-swatch fs-2 text-warning">
-                                                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
+                                                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
                                                                         <span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span>
                                                                         <span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span>
                                                                         <span class="path19"></span><span class="path20"></span><span class="path21"></span>
@@ -379,7 +381,7 @@
                                                 <div class="py-3 text-center border-top">
                                                     <a href="/pages/user-profile/activity.php" class="btn btn-color-gray-600 btn-active-color-primary">
                                                         View All
-                                                        <i class="fa fa-arrow-right fs-5"><span class="path1"></span><span class="path2"></span></i>
+                                                        <i class="fa fa-arrow-right fs-5"></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -532,7 +534,7 @@
                                                 <div class="py-3 text-center border-top">
                                                     <a href="/pages/user-profile/activity.php" class="btn btn-color-gray-600 btn-active-color-primary">
                                                         View All
-                                                        <i class="fa fa-arrow-right fs-5"><span class="path1"></span><span class="path2"></span></i>
+                                                        <i class="fa fa-arrow-right fs-5"></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -549,10 +551,10 @@
                                         data-kt-menu-placement="bottom-end"
                                     >
                                         <i class="fa fa-sun theme-light-show fs-3">
-                                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                            <span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
                                             <span class="path8"></span><span class="path9"></span><span class="path10"></span>
                                         </i>
-                                        <i class="fa fa-moon theme-dark-show fs-4"><span class="path1"></span><span class="path2"></span></i>
+                                        <i class="fa fa-moon theme-dark-show fs-4"></i>
                                     </a>
 
                                     <div
@@ -563,10 +565,7 @@
                                         <div class="menu-item px-3 my-0">
                                             <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
                                                 <span class="menu-icon" data-kt-element="icon">
-                                                    <i class="fa fa-sun fs-2">
-                                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
-                                                        <span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span>
-                                                    </i>
+                                                    <i class="fa fa-sun fs-2"></i>
                                                 </span>
                                                 <span class="menu-title">
                                                     Light
@@ -577,7 +576,7 @@
                                         <div class="menu-item px-3 my-0">
                                             <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
                                                 <span class="menu-icon" data-kt-element="icon">
-                                                    <i class="fa fa-moon fs-2"><span class="path1"></span><span class="path2"></span></i>
+                                                    <i class="fa fa-moon fs-2"></i>
                                                 </span>
                                                 <span class="menu-title">
                                                     Dark
@@ -588,7 +587,7 @@
                                         <div class="menu-item px-3 my-0">
                                             <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
                                                 <span class="menu-icon" data-kt-element="icon">
-                                                    <i class="fa fa-laptop fs-2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                                    <i class="fa fa-laptop fs-2"><span class="path3"></span><span class="path4"></span></i>
                                                 </span>
                                                 <span class="menu-title">
                                                     System
@@ -600,9 +599,26 @@
 
                                 <div class="d-flex align-items-center ms-1 ms-lg-2 d-lg-none" title="Show header menu">
                                     <button class="btn btn-icon btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" id="kt_sidebar_toggle">
-                                        <i class="fa fa-file fs-1"><span class="path1"></span><span class="path2"></span></i>
+                                        <i class="fa fa-file fs-1"></i>
                                     </button>
                                 </div>
+
+
+
+
+                                <?php
+                                
+                                    // Fetch user details
+                                    if (isset($_SESSION['user_id'])) {
+                                        $user_id = $_SESSION['user_id'];
+                                        $result = $conn->query("SELECT * FROM users WHERE id = $user_id");
+                                        $user = $result->fetch_assoc();
+                                    } else {
+                                        $user = ['profile_picture' => '']; 
+                                    }
+
+                                    $profile_image = !empty($user['profile_picture']) ? '' . $user['profile_picture'] : 'assets/media/avatars/1.jpg';
+                                    ?>
 
                                 <div class="d-flex align-items-center ms-lg-5" id="kt_header_user_menu_toggle">
                                     <div
@@ -617,7 +633,8 @@
                                         </div>
 
                                         <div class="symbol symbol-30px symbol-md-40px">
-                                            <img src="assets/media/avatars/2.jpg" alt="image" />
+                                            <img src="<?php echo $profile_image; ?>" class="rounded-circle" width="100" height="100" alt="Profile Picture"/>
+
                                         </div>
                                     </div>
 
@@ -625,7 +642,7 @@
                                         <div class="menu-item px-3">
                                             <div class="menu-content d-flex align-items-center px-3">
                                                 <div class="symbol symbol-50px me-5">
-                                                    <img alt="Logo" src="assets/media/avatars/2.jpg" />
+                                                <img src="<?php echo $profile_image; ?>" class="rounded-circle" width="100" height="100" alt="Profile Picture"/>
                                                 </div>
 
                                                 <div class="d-flex flex-column">
@@ -688,7 +705,7 @@
                                                         Statements
 
                                                         <span class="ms-2 lh-0" data-bs-toggle="tooltip" title="View your statements">
-                                                            <i class="fa fa-information-5 fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                                                            <i class="fa fa-information-5 fs-5"><span class="path3"></span></i>
                                                         </span>
                                                     </a>
                                                 </div>

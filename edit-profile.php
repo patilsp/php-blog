@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'includes/config.php';
 
 $user_id = $_SESSION['user_id'];
@@ -51,7 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="kt_content_container" class="d-flex flex-column-fluid align-items-stretch container-xxl">
                 
                 <!-- Left Sidebar -->
-                <?php include 'includes/leftSidebar.php'; ?>
 
                 <!-- Main Content Area -->
                 <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
@@ -84,10 +84,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
 
                 <!-- Footer -->
-                <?php include 'includes/footer.php'; ?>
+              
                 </div>
                 <!-- Right Sidebar -->
-                <?php include 'includes/rightSidebar.php'; ?>
             </div>
         </div>
     </div>

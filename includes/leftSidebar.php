@@ -47,7 +47,7 @@
             </div>
 
             <div class="menu-item">
-                <a href="ask.php" class="menu-link">
+                <a href="ask-question.php" class="menu-link">
                     <span class="menu-title">Ask Question</span>
                 </a>
             </div>
