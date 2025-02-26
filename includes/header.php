@@ -1,10 +1,6 @@
 
 <?php
-session_start();    
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
+    session_start();    
 ?>
 <!DOCTYPE html>
 <html lang="en" id="mainHtml">
@@ -28,11 +24,8 @@ if (!isset($_SESSION['user_id'])) {
         <div class="page d-flex flex-column flex-column-fluid">
             
             <!-- Header -->
-            
-
-
-
-<div id="kt_header" class="header align-items-stretch">
+    
+            <div id="kt_header" class="header align-items-stretch">
                     <div class="container-xxl d-flex align-items-stretch justify-content-between">
                         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 w-lg-225px me-5">
                             <div class="btn btn-icon btn-active-icon-primary ms-n2 me-2 d-flex d-lg-none" id="kt_aside_toggle">
@@ -49,7 +42,7 @@ if (!isset($_SESSION['user_id'])) {
 
                         
                         <div class="d-flex align-items-stretch justify-content-end flex-lg-grow-1">
-                       
+                        
                             <div class="d-flex align-items-stretch flex-shrink-0">
                             <div class="d-flex align-items-stretch ms-1 ms-lg-2">
                                     <div
@@ -218,7 +211,7 @@ if (!isset($_SESSION['user_id'])) {
                                                 </div>
                                             </div>
 
-                                           
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -715,7 +708,7 @@ if (!isset($_SESSION['user_id'])) {
                                             </div>
                                         </div>
 
-                                      
+                                        
                                         
                                         <div class="menu-item px-5 my-1">
                                             <a href="settings.php" class="menu-link px-5">

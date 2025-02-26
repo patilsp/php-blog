@@ -1,3 +1,14 @@
+
+<?php
+// include 'includes/config.php';
+// Fetch total number of questions
+$total_questions_result = $conn->query("SELECT COUNT(*) AS total FROM questions");
+$total_questions = $total_questions_result->fetch_assoc()['total'];
+
+// Fetch all questions
+$questions_result = $conn->query("SELECT * FROM questions ORDER BY created_at DESC");
+?>
+
 <div
     class="sidebar p-5 px-lg-0 py-lg-11"
     data-kt-drawer="true"
@@ -15,39 +26,27 @@
 
         <input type="text" class="form-control bg-transparent ps-13 fs-7 h-40px" name="search" value="" placeholder="Search" />
     </form>
-
     <!-- Popular Questions for School Kids -->
-    <div class="card bg-light mb-5 mb-lg-10 shadow-none border-0">
-        <div class="card-header align-items-center border-0">
-            <h3 class="card-title text-gray-900 fs-3">School Kids Q&A</h3>
-        </div>
-
-        <div class="card-body pt-0">
-            <div class="d-flex mb-5">
-                <i class="fa fa-question-circle fs-2 mt-0 me-2"></i>
-                <a href="/question.html" class="text-gray-700 text-hover-primary fs-6"> Why is the sky blue? </a>
+    <div class="post" id="kt_post">
+      
+        <div class="card bg-light mb-5 mb-lg-10 shadow-none border-0">
+            <div class="card-header align-items-center border-0">
+                <h3 class="card-title text-gray-900 fs-3">School Kids Q&A</h3>
             </div>
-
-            <div class="d-flex mb-5">
-                <i class="fa fa-question-circle fs-2 mt-0 me-2"></i>
-                <a href="/question.html" class="text-gray-700 text-hover-primary fs-6"> What are the three states of matter? </a>
-            </div>
-
-            <div class="d-flex mb-5">
-                <i class="fa fa-question-circle fs-2 mt-0 me-2"></i>
-                <a href="/question.html" class="text-gray-700 text-hover-primary fs-6"> How does a plant grow? </a>
-            </div>
-
-            <div class="d-flex mb-5">
-                <i class="fa fa-question-circle fs-2 mt-0 me-2"></i>
-                <a href="/question.html" class="text-gray-700 text-hover-primary fs-6"> What is the water cycle? </a>
-            </div>
-
-            <div class="d-flex">
-                <i class="fa fa-question-circle fs-2 mt-0 me-2"></i>
-                <a href="/question.html" class="text-gray-700 text-hover-primary fs-6"> Who invented electricity? </a>
+            <div class="card-body mb-0">
+            <?php while ($row = $questions_result->fetch_assoc()) { $question_id = $row['id']; ?>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fa fa-question-circle fs-2 mt-0 me-2"></i>
+                    <a href="question-details.php?id=<?php echo $question_id; ?>" class="text-gray-700 text-hover-primary fs-6">
+                        <?php echo htmlspecialchars($row['title']); ?>
+                        ?
+                    </a>
+                   
+                </div>
+                <?php } ?>
             </div>
         </div>
+        
     </div>
 
     <!-- Latest Tutorials for School Kids -->
