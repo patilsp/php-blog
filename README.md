@@ -2,6 +2,8 @@
 
 A **Question & Answer** platform where **students, teachers, and parents** can ask and answer questions. The platform supports **upvotes/downvotes, categories, tags, user authentication, and a structured question-answer format**.
 
+![image](https://github.com/user-attachments/assets/c5b68558-5d1b-4786-b6d0-ac52ce124df0)
+
 
 ![image](https://github.com/user-attachments/assets/da9ecf0a-b739-46de-902e-e4105d501d2f)
 
