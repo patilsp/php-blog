@@ -37,23 +37,6 @@ A **Question & Answer** platform where **students, teachers, and parents** can a
 
 ---
 
-## 📂 Project Structure  
-/php-blog
-│── /assets # CSS, JS, images, icons
-│── /includes # Header, Footer, Sidebar, Config
-│── /pages # Profile, Dashboard, Ask Question
-│── /db.sql # Database schema
-│── index.php # Homepage (All Questions)
-│── login.php # User Authentication
-│── register.php # User Signup
-│── ask-question.php # Form to ask a question
-│── question-details.php # View single question & answers
-│── submit-answer.php # Submit an answer
-│── upvote.php # Handles upvotes/downvotes
-│── README.md # Project Documentation
-
----
-
 ## 📌 Installation Guide  
 ### **1️⃣ Clone the Repository**  
 ```bash
