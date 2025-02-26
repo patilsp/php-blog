@@ -1,5 +1,4 @@
 
-
 <?php
 session_start();    
 if (!isset($_SESSION['user_id'])) {
@@ -7,8 +6,33 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="en" id="mainHtml">
+<head>
+    <title>PHP Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="PHP Blog" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" />
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 
-            <div id="kt_header" class="header align-items-stretch">
+</head>
+
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled sidebar-enabled">
+    <div class="d-flex flex-column flex-root">
+        <div class="page d-flex flex-column flex-column-fluid">
+            
+            <!-- Header -->
+            
+
+
+
+<div id="kt_header" class="header align-items-stretch">
                     <div class="container-xxl d-flex align-items-stretch justify-content-between">
                         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 w-lg-225px me-5">
                             <div class="btn btn-icon btn-active-icon-primary ms-n2 me-2 d-flex d-lg-none" id="kt_aside_toggle">
@@ -714,3 +738,12 @@ if (!isset($_SESSION['user_id'])) {
                         </div>
                     </div>
                 </div>
+
+            <div id="kt_content_container" class="d-flex flex-column-fluid align-items-stretch container-xxl">
+                
+                <!-- Left Sidebar -->
+                <?php include 'includes/leftSidebar.php'; ?>
+
+                <!-- Main Content Area -->
+                <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                    <div class="wrapper d-flex flex-column flex-row-fluid mt-5 mt-lg-10" id="kt_wrapper">

@@ -1,11 +1,4 @@
 <?php
-// Start session if not already started
-
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
 
 // Database Connection
 $host = "localhost";
