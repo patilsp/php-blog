@@ -29,10 +29,19 @@ $answers = $conn->query("
     ORDER BY created_at DESC
 ");
 ?>
+<style>
+/* .comment-box > div:nth-child(even) {
+    margin-left: 20px;
+}
+.comment-box > div:nth-child(odd) {
+    margin-right: 20px;
+} */
 
+
+</style>
 <?php include 'includes/header.php'; ?>
 
-<div class="content flex-column-fluid" id="kt_content">
+<div class="content flex-column-fluid mb-10" id="kt_content">
     <div class="post" id="kt_post">
         <div class="mb-0">
             <div class="d-flex justify-content-between align-items-center mb-9">
@@ -89,10 +98,10 @@ $answers = $conn->query("
 
         <a id="answers"></a>
         <h2 class="fw-bold text-gray-900 mb-10">Replies (<?php echo $answers->num_rows; ?>)</h2>
-
-        <div class="mb-10">
+ 
+        <div class="mb-10 comment-box">
             <?php while ($answer = $answers->fetch_assoc()) { ?>
-                <div class="border rounded p-2 p-lg-6 mb-10">
+                <div class="border rounded p-3 mb-3">
                     <div class="mb-0">
                         <div class="d-flex flex-stack flex-wrap mb-5">
                             <div class="d-flex align-items-center py-1">

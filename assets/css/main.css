@@ -23,3 +23,6 @@
 #kt_app_content{
     margin-top: 1rem
 }
+.comment-box > div:nth-child(2) {
+  margin-left: 20px; 
+}
